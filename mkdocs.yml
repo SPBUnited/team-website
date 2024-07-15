@@ -17,5 +17,14 @@ nav:
   - Программное обеспечение:
       - Используемые программы: "software/software.md"
       - Стратегия игры: "software/strategy.md"
-      - Алгоритмы: "software/algorithms.md"
+      - Алгоритмы: "software/algorithms/algorithms.md"
   - Ссылки: "links.md"
+
+plugins:
+  - search
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+markdown_extensions:
+  - mdx_math
