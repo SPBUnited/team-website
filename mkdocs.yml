@@ -1,10 +1,21 @@
-site_name: SPBUnited
+site_name: SPbUnited
+site_url: https://spbunited.ru/
+site_description: SPbUnited team knowledge base.
+site_author: Glazov Yuri
 
-site_url: https://mydomain.org/mysite
+repo_url: https://github.com/SPBUnited/team-website
+
 theme:
   name: united
+  # color_mode: auto
+  # user_color_mode_toggle: true
+  locale: ru
 
 nav:
-  - Home: "index.md"
-  - About: "about.md"
-  - Links: "links.md"
+  - Основное: "index.md"
+  - Конструкция: "hardware/tech.md"
+  - Программное обеспечение:
+      - Используемые программы: "software/software.md"
+      - Стратегия игры: "software/strategy.md"
+      - Алгоритмы: "software/algorithms.md"
+  - Ссылки: "links.md"
