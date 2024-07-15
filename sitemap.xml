@@ -16,17 +16,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://spbunited.ru/software/algorithms/</loc>
-         <lastmod>2024-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://spbunited.ru/software/software/</loc>
          <lastmod>2024-07-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://spbunited.ru/software/strategy/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://spbunited.ru/software/algorithms/algorithms/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://spbunited.ru/software/algorithms/bang_bang/bang_bang/</loc>
          <lastmod>2024-07-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
