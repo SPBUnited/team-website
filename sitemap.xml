@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://mydomain.org/mysite/</loc>
-         <lastmod>2024-07-14</lastmod>
+         <loc>https://spbunited.ru/</loc>
+         <lastmod>2024-07-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/about/</loc>
-         <lastmod>2024-07-14</lastmod>
+         <loc>https://spbunited.ru/links/</loc>
+         <lastmod>2024-07-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/links/</loc>
-         <lastmod>2024-07-14</lastmod>
+         <loc>https://spbunited.ru/hardware/tech/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://spbunited.ru/software/algorithms/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://spbunited.ru/software/software/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://spbunited.ru/software/strategy/</loc>
+         <lastmod>2024-07-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

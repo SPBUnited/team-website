@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="ru" data-bs-theme="light">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
-        
-        <link rel="canonical" href="https://mydomain.org/mysite/">
+        <meta name="description" content="SPbUnited team knowledge base.">
+        <meta name="author" content="Glazov Yuri">
+        <link rel="canonical" href="https://spbunited.ru/">
         <link rel="shortcut icon" href="img/favicon.ico">
-        <title>SPBUnited</title>
+        <title>SPbUnited</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/fontawesome.min.css" rel="stylesheet">
         <link href="css/brands.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
     <body class="homepage">
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">SPBUnited</a>
+                <a class="navbar-brand" href=".">SPbUnited</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -35,31 +35,51 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="nav-item">
-                                <a href="." class="nav-link active" aria-current="page">Home</a>
+                                <a href="." class="nav-link active" aria-current="page">Основное</a>
                             </li>
                             <li class="nav-item">
-                                <a href="about/" class="nav-link">About</a>
+                                <a href="hardware/tech/" class="nav-link">Конструкция</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Программное обеспечение</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="software/software/" class="dropdown-item">Используемые программы</a>
+</li>
+                                    
+<li>
+    <a href="software/strategy/" class="dropdown-item">Стратегия игры</a>
+</li>
+                                    
+<li>
+    <a href="software/algorithms/" class="dropdown-item">Алгоритмы</a>
+</li>
+                                </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="links/" class="nav-link">Links</a>
+                                <a href="links/" class="nav-link">Ссылки</a>
                             </li>
                         </ul>
 
                     <ul class="nav navbar-nav ms-md-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
+                                <i class="fa fa-search"></i> Поиск
                             </a>
                         </li>
                             <li class="nav-item">
                                 <a rel="prev" class="nav-link disabled">
-                                    <i class="fa fa-arrow-left"></i> Previous
+                                    <i class="fa fa-arrow-left"></i> Назад
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="about/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
+                                <a rel="next" href="hardware/tech/" class="nav-link">
+                                    Вперед <i class="fa fa-arrow-right"></i>
                                 </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/SPBUnited/team-website/edit/master/docs/index.md" class="nav-link"><i class="fa-brands fa-github"></i> Редактировать в GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -70,7 +90,7 @@
             <div class="row">
                     <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Содержание">
             <span class="fa fa-angle-down"></span>
         </button>
     </div>
@@ -79,13 +99,13 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link">Наша команда</a>
+            <li class="nav-item" data-bs-level="1"><a href="#spbunited" class="nav-link">SPbUnited</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">Конструкция</a>
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">Конструкция</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">Программное Обеспеченье</a>
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">Программное Обеспеченье</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -96,18 +116,19 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="_1">Наша команда</h1>
-<p>Мы - команда в лиге RoboCup SSl (Small Size League) из России.</p>
-<h2 id="_2">Конструкция</h2>
-<p>У нас крутые роботы</p>
-<h2 id="_3">Программное Обеспеченье</h2>
-<p>Круче роботов у нас только собственное ПО и стратегия игры 😎</p></div>
+<h1 id="spbunited">SPbUnited</h1>
+<p>Мы - команда в лиге RoboCup SSL (Small Size League) из России.</p>
+<h2 id="_1">Конструкция</h2>
+<p>У нас крутые роботы 😎</p>
+<h2 id="_2">Программное Обеспеченье</h2>
+<h4 id="larcmacs">LARCmaCS</h4>
+<p>Для участия в лиге мы разработали программу для получения пакетов от судей и отправки команд на роботов LARCmaCS</p></div>
             </div>
         </div>
 
         <footer class="col-md-12">
             <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+            <p>Документация создана с помощью <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script>
@@ -121,17 +142,17 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h4 class="modal-title" id="searchModalLabel">Поиск</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
             </div>
             <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
+                <p>Чтобы воспользоваться поиском по документам, введите поисковый запрос ниже.</p>
                 <form>
                     <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Поиск..." id="mkdocs-search-query" title="Введите поисковый запрос">
                     </div>
                 </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+                <div id="mkdocs-search-results" data-no-results-text="Ничего не найдено"></div>
             </div>
             <div class="modal-footer">
             </div>
@@ -141,33 +162,33 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h4 class="modal-title" id="keyboardModalLabel">Сочетания клавиш</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
             </div>
             <div class="modal-body">
               <table class="table">
                 <thead>
                   <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
+                    <th style="width: 20%;">Клавиши</th>
+                    <th>Действие</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
+                    <td>Открыть справку</td>
                   </tr>
                   <tr>
                     <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
+                    <td>Следующая страница</td>
                   </tr>
                   <tr>
                     <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
+                    <td>Предыдущая страница</td>
                   </tr>
                   <tr>
                     <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
+                    <td>Поиск</td>
                   </tr>
                 </tbody>
               </table>
@@ -183,5 +204,5 @@
 
 <!--
 MkDocs version : 1.6.0
-Build Date UTC : 2024-07-14 15:30:59.125271+00:00
+Build Date UTC : 2024-07-15 13:36:08.486979+00:00
 -->
