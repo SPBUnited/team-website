@@ -13,10 +13,12 @@ theme:
 
 nav:
   - Основное: "index.md"
-  - Конструкция: "hardware/tech.md"
+  - Устройство робота:
+      - Конструкция: "hardware/construction/construction.md"
+      - Электроника: "hardware/electronics/electronics.md"
   - Программное обеспечение:
-      - Используемые программы: "software/software.md"
-      - Стратегия игры: "software/strategy.md"
+      - Используемые программы: "software/software/software.md"
+      - Стратегия игры: "software/strategy/strategy.md"
       - Алгоритмы: "software/algorithms/algorithms.md"
   - Ссылки: "links.md"
 
