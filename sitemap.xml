@@ -2,37 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://spbunited.ru/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://spbunited.ru/links/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://spbunited.ru/hardware/tech/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://spbunited.ru/hardware/construction/construction/</loc>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://spbunited.ru/software/software/</loc>
-         <lastmod>2024-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://spbunited.ru/software/strategy/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://spbunited.ru/hardware/electronics/electronics/</loc>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://spbunited.ru/software/algorithms/algorithms/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://spbunited.ru/software/algorithms/bang_bang/bang_bang/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-07-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://spbunited.ru/software/software/software/</loc>
+         <lastmod>2024-07-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://spbunited.ru/software/strategy/strategy/</loc>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
