@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Glazov Yuri">
+        <link rel="canonical" href="https://spbunited.ru/entry-guide/guide/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Guide - SPbUnited</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">SPbUnited</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Основное</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Устройство робота <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../hardware/construction/" class="dropdown-item">Конструкция</a>
+</li>
+                                    
+<li>
+    <a href="../../hardware/electronics/" class="dropdown-item">Электроника</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Программное обеспечение <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../software/programs/" class="dropdown-item">Используемые программы</a>
+</li>
+                                    
+<li>
+    <a href="../../software/strategy/" class="dropdown-item">Стратегия игры</a>
+</li>
+                                    
+<li>
+    <a href="../../software/algorithms/" class="dropdown-item">Алгоритмы</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../links/" class="nav-link">Ссылки</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
+        <ul class="nav flex-column">
+            
+            
+            
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">Полигон</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h3 id="_1">Полезные ссылки, с которыми стоит ознакомиться:</h3>
+<ol>
+<li><a href="https://ssl.robocup.org/">Официальный сайт</a> лиги SSL, где можно найти регламенты, технические описания (TDP) роботов и алгоритмов сильных команд и многое другое</li>
+<li><a href="https://github.com/RoboCup-SSL">Репозиторий GitHub</a>, где находятся все программные решения, предоставляемые организаторами</li>
+<li><a href="https://spbunited.ru/">Сайт</a> и <a href="https://github.com/SPBUnited">GitHub</a> команды SPbUnited, а также <a href="https://github.com/SPBUnited-Junior">GitHub</a> команды Eagles</li>
+<li><a href="https://spbunited.github.io/ssl-div-c-rules/">Регламент SSL Div. C</a></li>
+<li><a href="https://docs.google.com/document/d/1jFf-rv-ef6Vw0lVROEFnMGD_OXuIHW_L79-oR32_RwU/edit?usp=sharing">Требования к полигону SSL Div. C</a></li>
+<li>Каналы <a href="https://www.youtube.com/@SPbUnited.RoboCup">в Телеграмм</a> и <a href="https://www.youtube.com/@SPbUnited.RoboCup">на Ютуб</a> о развитии SSL в России (деятельность SPbUnited и не только)</li>
+</ol>
+<h3 id="_2">Перечень ПО и оборудования:</h3>
+<p><img alt="Поле" src="../img/polygon.png" /></p>
+<h5 id="_3">ПО и оборудование организаторов:</h5>
+<p>ПО и оборудование, описанное в этой части создаёт всю инфраструктуру, необходимую для лиги SSL. На соревнованиях ответственность за него несут организаторы, но поскольку всё то же самое оборудование необходимо любой команде для тренирововк, то для отладки команды самостоятельно устанавливают и настраивают такие же системы.</p>
+<blockquote>
+<p>Инструкции по установке и запуску каждого ПО описаны в его репозитории</p>
+</blockquote>
+<ol>
+<li>Камеры над полем - нужны для определения робота и мяча. В зависимости от размеров поля может использоваться одна или несколько камер. На начальных этапах могут использоваться обычные USB вэб-камеры (<a href="https://www.logitech.com/en-eu/shop/p/c920s-pro-hd-webcam.960-001252">например такие</a>), но у них зачастую присутствуют задержки в передачи изображения и не всегда хватает длины USB проводов. Для больших полигонов обычно используются промышленные камеры, подключаемые через FireWire или Ethenet (<a href="https://www.balluff.com/en-de/focus-topics/balluff-mv">например такие</a>). Для таких камер необходимо предусмотреть подключение к компьютеру с SSL-Vision с соответствующим интерфейсом.</li>
+<li>Сетевое оборудование (роутер) - необходим для создания сети по которой компьютеры команд будут получать данные с оборудования организаторов.</li>
+<li><a href="https://github.com/RoboCup-SSL/ssl-vision">SSL-Vision</a> - по для обработки изображения, получаемого с камер, определения там роботов и мяча. Отсюда команды получают координаты всех объектов на поле.</li>
+<li><a href="https:github.com/RoboCup-SSL/ssl-game-controller">Game controller</a> - контроллер игры, управляемый человеком. Здесь главный судья запускает или останавливает игру, назначает штрафы и свободные удары и тд. Отсюда команды получают информацию о статусе игры.</li>
+<li><a href="https://github.com/RoboCup-SSL/ssl-status-board">Status Board</a> (не обязательно) - ПО, создающее сайт с красивым отображением статуса игры (счёт, таймер и тд). Этот сайт можно открыт на экранах вокруг поля для наглядного отображения статуса игры.</li>
+<li><a href="https://spbunited.ru/software/software/software/#:~:text=%D0%BD%D0%B0%20%D1%8D%D1%82%D0%B8%20%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-,Auto%2DReferee,-%D0%94%D0%BB%D1%8F%20%D1%83%D0%B4%D0%BE%D0%B1%D1%81%D1%82%D0%B2%D0%B0%20%D1%81%D1%83%D0%B4%D0%B5%D0%B9">Auto referee</a> (не обязательно) - автоматизированный судья. Это не обязательный компонент, но он значительно облегчает проведение матчей, автоматически определяя нарушения и назначая соответствующие действия.</li>
+</ol>
+<p>Подробнее все программы описаны на <a href="../../software/programs/">этой странице</a></p>
+<p>Всё ПО, описанное выше не предъявляет особых требований к системе, на которой запускается, поэтому для запуска может использоваться даже обычный ноутбук с Linux.</p>
+<h5 id="-">ПО и оборудование команд-участников:</h5>
+<ol>
+<li>Компьютер команды - кмопьютер, получающий данные о положении роботов и мяча из SSL-Vision, команды от Game Controller и рассчитывающий действия роботов команды.</li>
+<li>Модуль беспроводного управления роботами - система, получающая команды от компьютера и пересылающая их на роботов по радиоканалу. Может использоваться Raspbery Pi с модулями NRF24L01.</li>
+<li>Команда автономных роботов - получают команды, рассчитаные на компьютере и играют в футбол. Можно использовать открытые решения, например <a href="https://github.com/SPBUnited-Junior/Eagles_Hardware_2024">роботов</a> команды Eagles. Подробные требования к роботам описаны в регламенте лиги.</li>
+</ol>
+<h2 id="_4">Полигон</h2>
+<p><img alt="Размеры поля" src="../img/poly_size.png" /></p>
+<p>Все требования к полигону описаны <a href="https://docs.google.com/document/d/1jFf-rv-ef6Vw0lVROEFnMGD_OXuIHW_L79-oR32_RwU/edit?usp=sharing">здесь</a>. </p>
+<blockquote>
+<p>Стоит отметить, что у команд далеко не всегда есть возможность разложить целый полигон из-за его значительных размеров, поэтому нередко команды раскладывают лишь часть поля. Кроме уменьшения занимаемого места это также позволяет использовать меньшее количество камер. Такого решения обычно полностью хватает для отладки базового функционала роботов.</p>
+</blockquote>
+<ol>
+<li>Покрытие: <a href="http://stroitelnye-materialy-v-sankt-peterburge.ru/product/14467-kovrovoe_pokryitie_tehnolayn_flort_ekspo_06017__2_m">ковролин</a> с коротким ворсом (до 3 мм), цвет градации зелёного, возможно сращивание из двух и более отрезов ковролина. Ширина поля взята 4 метра, чтобы можно было использовать 2 куска по 2 метра. Закреплять ковролин к полу можно на двусторонний скотч, плотно проклеив стыки, так как при неровностях роботы будут за них зацепляться</li>
+<li>Разметка: белая линия 10 мм. Можно нанести краской, бумажным скотчем или (ТУТ УКАЗАТЬ ТУ ТОНКУЮ ЛЕНТУ, ЕСЛИ Я ЕЕ НЕ ПРИДУМАЛА)</li>
+<li>Вокруг поля должны быть установлены стенки высотой 100мм толщиной от 10мм. Все стенки должны быть чёрного цвета.</li>
+<li>Ворота должны быть установлены в центре каждой линии ворот и прочно прикреплены к стенкам с помощью балок. Размер ворот 800x180мм. Ворота состоят из двух боковых стенок высотой 160 мм и задней стенки высотой 160 мм. Внутреннюю поверхность рекомендуется покрыть мягким материалом, таким как поролон или пенопласт. Внутренняя поверхность должна быть белой, а внешняя и верхняя поверхности — чёрной.<blockquote>
+<p>Ворота и стенки должны выдерживать удары роботов. Наилучшим решением будет прикрутить стенки и ворота к поверхности, на которой разложен ковролин. Более простым решением является использование липучек на нижней стороне ворот и стенок. Наш опыт показывает, что этого достаточно для их фиксации на поле.</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="_5">Монтаж камер</h3>
+<p>Обзор камер(ы) должен захватывать всё поле, а также зону аута (до стенок), чтобы робот, уехавший за поле, не пропадал из поля зрения камеры, и мог самостоятельно выехать из аута.</p>
+<p>Камеры могут быть закреплены любым удобным способом. На соревнованиях зачастую используются фермы, подвешенные к потолку или с опорамми вокруг поля. Команда SPbUnited для вывоза в поездки использует 2 складных штатива и разборную штангу из алюминиевого профиля, закрепляемую между ними. Также камеру можно закрепить напрямую к потолку, если помещение с полигоном позволяет это сделать.</p>
+<blockquote>
+<p>В зависимости от угла обзора используемых камер высота их монтажа над соревновательным полигоном будет варьироваться, но обычно составляет 3-5 метров.</p>
+<p>Необходимо продумать доступ к камерам после их установки на необходимую высоту. Это нужно для точной подгонки направления камеры и ручной настройки фокуса, если используемая камера ей обладает.</p>
+</blockquote></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

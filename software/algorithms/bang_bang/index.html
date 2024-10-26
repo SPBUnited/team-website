@@ -6,16 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Glazov Yuri">
-        <link rel="canonical" href="https://spbunited.ru/software/algorithms/bang_bang/bang_bang/">
-        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <link rel="canonical" href="https://spbunited.ru/software/algorithms/bang_bang/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
         <title>Построение "Bang-bang" траекторий движения между двумя точками для футбола роботов - SPbUnited</title>
-        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../../../css/base.css" rel="stylesheet">
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
 
-        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -23,7 +23,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="../../../..">SPbUnited</a>
+                <a class="navbar-brand" href="../../..">SPbUnited</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -34,18 +34,18 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href="../../../.." class="nav-link">Основное</a>
+                                <a href="../../.." class="nav-link">Основное</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Устройство робота <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../../hardware/construction/" class="dropdown-item">Конструкция</a>
+    <a href="../../../hardware/construction/" class="dropdown-item">Конструкция</a>
 </li>
                                     
 <li>
-    <a href="../../../../hardware/electronics/" class="dropdown-item">Электроника</a>
+    <a href="../../../hardware/electronics/" class="dropdown-item">Электроника</a>
 </li>
                                 </ul>
                             </li>
@@ -54,20 +54,20 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../programs/" class="dropdown-item">Используемые программы</a>
+    <a href="../../programs/" class="dropdown-item">Используемые программы</a>
 </li>
                                     
 <li>
-    <a href="../../../strategy/" class="dropdown-item">Стратегия игры</a>
+    <a href="../../strategy/" class="dropdown-item">Стратегия игры</a>
 </li>
                                     
 <li>
-    <a href="../../" class="dropdown-item">Алгоритмы</a>
+    <a href="../" class="dropdown-item">Алгоритмы</a>
 </li>
                                 </ul>
                             </li>
                             <li class="navitem">
-                                <a href="../../../../links/" class="nav-link">Ссылки</a>
+                                <a href="../../../links/" class="nav-link">Ссылки</a>
                             </li>
                         </ul>
 
@@ -149,7 +149,7 @@
 </blockquote>
 <h1 id="1">1. Длинные траектории, случай "Призма"</h1>
 <p>Название обусловлено видом графика зависимости проекций скорости на координатные оси от времени</p>
-<p><img alt="Graphs with projection" src="../projection_graph_trapez.png" /></p>
+<p><img alt="Graphs with projection" src="projection_graph_trapez.png" /></p>
 <p>Как мы видим, обе проекции скорости на оси меняются одновременно</p>
 <h2 id="11">1.1 Постановка задачи</h2>
 <p>Робот сначала разгоняется c начальной скорости <script type="math/tex">\vec v_1</script> до максимальной скорости <script type="math/tex">v</script> с ускорением <script type="math/tex">\vec a_1</script> за время <script type="math/tex">t_1</script>, после едет с максимальной скоростью <script type="math/tex">\vec v</script> время <script type="math/tex">t</script> и тормозит с ускорением <script type="math/tex">\vec a_2</script> за время <script type="math/tex">t_2</script> до конечной скорости <script type="math/tex">\vec v_2</script>. За всё движение робот перемещается на <script type="math/tex">\Delta \vec r</script>.</p>
@@ -160,7 +160,7 @@
 </li>
 </ul>
 <h2 id="12">1.2 Реализация</h2>
-<p><img alt="Choosing an angle" src="../spinning_trapez.gif" /> </p>
+<p><img alt="Choosing an angle" src="spinning_trapez.gif" /> </p>
 <p>Красные участки - разгон; синий участок - постоянная скорость; фиолетовые точки - начало и конец.</p>
 <p>Поиск будем производить "вращая" вектор <script type="math/tex">v</script>. Остальные неизвестные восстановим из формул (аналогично для <script type="math/tex">t_2, \vec a_2</script>):
 <script type="math/tex; mode=display">\vec a_1 = (\vec v - \vec v_1) * t_1</script>
@@ -183,7 +183,7 @@
 <p><strong>Первый случай</strong> скучный, нужно лишь перезапустить алгоритм, увеличив количество перебираемый значений перед троичным поиском. Пока не будем тратить на него время работы программы и перезапустим код в случае если не удастся найти путь другими методами тоже. <strong>Второй случай</strong> уже требует новый алгоритм для создания траекторий, который мы рассмотрим далее</p>
 <h1 id="2">2. Короткие траектории, случай "Треугольник"</h1>
 <p>На этот раз название вновь связано с видом графика зависимости проекций скорости на координатные оси от времени</p>
-<p><img alt="Graphs with projection" src="../projection_graph_triangle.png" /></p>
+<p><img alt="Graphs with projection" src="projection_graph_triangle.png" /></p>
 <p>На этот раз на графике нет прямого участка из-за того, что робот не успевает разогнаться до максимальной скорости.</p>
 <h2 id="21">2.1 Постановка задачи</h2>
 <p>Робот разгоняется c начальной скорости <script type="math/tex">\vec v_1</script> до некоторой скорости <script type="math/tex">v</script> с ускорением <script type="math/tex">\vec a_1</script> за время <script type="math/tex">t_1</script> и сразу тормозит с ускорением <script type="math/tex">\vec a_2</script> за время <script type="math/tex">t_2</script> до конечной скорости <script type="math/tex">\vec v_2</script>. За всё движение робот также перемещается на <script type="math/tex">\Delta \vec r</script>.</p>
@@ -195,7 +195,7 @@
 </ul>
 <p>Задача усложнилась с предыдущего случая тем, что теперь мы не знаем модуль промежуточной скорости. </p>
 <h2 id="22">2.2 Реализация</h2>
-<p><img alt="Choosing an angle" src="../spinning_triangle_%28fix_speed%29.gif" /> </p>
+<p><img alt="Choosing an angle" src="spinning_triangle_%28fix_speed%29.gif" /> </p>
 <p>Перебор угла для заданного модуля скорости. Красные участки - разгон; фиолетовые точки - начало и конец.</p>
 <p>Поиск будем производить не только "вращая" вектор <script type="math/tex">v</script>, но и перебирая модуль его скорости. Ускорения и время восстановим из вышеописанных формул (см. п. 1.2)</p>
 <p>Будем перебирать модуль <script type="math/tex">\vec v</script> и отдавать его тому же алгоритму, что считал расстояние до цели для "трапеции"</p>
@@ -220,12 +220,12 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "../../../..",
+            var base_url = "../../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../js/base.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
-        <script src="../../../../search/main.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
