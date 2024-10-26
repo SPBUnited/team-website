@@ -5,8 +5,8 @@
 ![Our team](./img/larc2024_team.jpeg)
 
 ##Навигация по сайту
-- [Используемые программы](./software/software/software.md), [стратегия игры](./software/strategy/strategy.md) и [алгоритмы](./software/algorithms/algorithms.md)
-- [Конструкция](./hardware/construction/construction.md) и [электроника](./hardware/electronics/electronics.md)
+- [Используемые программы](./software/programs.md), [стратегия игры](./software/strategy.md) и [алгоритмы](./software/algorithms.md)
+- [Конструкция](./hardware/construction.md) и [электроника](./hardware/electronics.md)
 - [Полезные ссылки](./links.md)
 
 

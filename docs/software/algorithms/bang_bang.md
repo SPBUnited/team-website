@@ -5,7 +5,7 @@
 # 1. Длинные траектории, случай "Призма"
 Название обусловлено видом графика зависимости проекций скорости на координатные оси от времени
 
-![Graphs with projection](./projection_graph_trapez.png)
+![Graphs with projection](./bang_bang/projection_graph_trapez.png)
 
 Как мы видим, обе проекции скорости на оси меняются одновременно
 
@@ -16,7 +16,7 @@
 * Найти: \(\vec a_1, \vec a_2, \vec v\) (восстановить, зная модули), \(t\)
 
 ## 1.2 Реализация
-![Choosing an angle](./spinning_trapez.gif) 
+![Choosing an angle](./bang_bang/spinning_trapez.gif) 
 
 Красные участки - разгон; синий участок - постоянная скорость; фиолетовые точки - начало и конец.
 
@@ -46,7 +46,7 @@ $$(\vec v_1 + \vec v)*t_1/2 + \vec v*t + (\vec v_2+\vec v)*t_2/2 \to \Delta \vec
 # 2. Короткие траектории, случай "Треугольник"
 На этот раз название вновь связано с видом графика зависимости проекций скорости на координатные оси от времени
 
-![Graphs with projection](./projection_graph_triangle.png)
+![Graphs with projection](./bang_bang/projection_graph_triangle.png)
 
 На этот раз на графике нет прямого участка из-за того, что робот не успевает разогнаться до максимальной скорости.
 
@@ -60,7 +60,7 @@ $$(\vec v_1 + \vec v)*t_1/2 + \vec v*t + (\vec v_2+\vec v)*t_2/2 \to \Delta \vec
 Задача усложнилась с предыдущего случая тем, что теперь мы не знаем модуль промежуточной скорости. 
 
 ## 2.2 Реализация
-![Choosing an angle](./spinning_triangle_(fix_speed).gif) 
+![Choosing an angle](./bang_bang/spinning_triangle_(fix_speed).gif) 
 
 Перебор угла для заданного модуля скорости. Красные участки - разгон; фиолетовые точки - начало и конец.
 
