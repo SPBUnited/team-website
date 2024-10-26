@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" data-bs-theme="light">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,15 +10,14 @@
         <link rel="shortcut icon" href="img/favicon.ico">
         <title>SPbUnited</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/fontawesome.min.css" rel="stylesheet">
-        <link href="css/brands.min.css" rel="stylesheet">
-        <link href="css/solid.min.css" rel="stylesheet">
-        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
-        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
     <body class="homepage">
@@ -26,7 +25,7 @@
             <div class="container">
                 <a class="navbar-brand" href=".">SPbUnited</a>
                 <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -34,62 +33,59 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="nav-item">
-                                <a href="." class="nav-link active" aria-current="page">Основное</a>
+                            <li class="navitem active">
+                                <a href="." class="nav-link">Основное</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Устройство робота</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Устройство робота <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="hardware/construction/construction/" class="dropdown-item">Конструкция</a>
+    <a href="hardware/construction/" class="dropdown-item">Конструкция</a>
 </li>
                                     
 <li>
-    <a href="hardware/electronics/electronics/" class="dropdown-item">Электроника</a>
+    <a href="hardware/electronics/" class="dropdown-item">Электроника</a>
 </li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Программное обеспечение</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Программное обеспечение <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="software/software/software/" class="dropdown-item">Используемые программы</a>
+    <a href="software/programs/" class="dropdown-item">Используемые программы</a>
 </li>
                                     
 <li>
-    <a href="software/strategy/strategy/" class="dropdown-item">Стратегия игры</a>
+    <a href="software/strategy/" class="dropdown-item">Стратегия игры</a>
 </li>
                                     
 <li>
-    <a href="software/algorithms/algorithms/" class="dropdown-item">Алгоритмы</a>
+    <a href="software/algorithms/" class="dropdown-item">Алгоритмы</a>
 </li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
+                            <li class="navitem">
                                 <a href="links/" class="nav-link">Ссылки</a>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav ms-md-auto">
+                    <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Поиск
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
                             </a>
                         </li>
                             <li class="nav-item">
                                 <a rel="prev" class="nav-link disabled">
-                                    <i class="fa fa-arrow-left"></i> Назад
+                                    <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="hardware/construction/construction/" class="nav-link">
-                                    Вперед <i class="fa fa-arrow-right"></i>
+                                <a rel="next" href="hardware/construction/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
                                 </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://github.com/SPBUnited/team-website/edit/master/docs/index.md" class="nav-link"><i class="fa-brands fa-github"></i> Редактировать в GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -98,20 +94,20 @@
 
         <div class="container">
             <div class="row">
-                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Содержание">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
             <span class="fa fa-angle-down"></span>
         </button>
     </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#spbunited" class="nav-link">SPbUnited</a>
+            <li class="nav-item" data-level="1"><a href="#spbunited" class="nav-link">SPbUnited</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">Навигация по сайту</a>
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">Навигация по сайту</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -127,8 +123,8 @@
 <p><img alt="Our team" src="img/larc2024_team.jpeg" /></p>
 <h2 id="_1">Навигация по сайту</h2>
 <ul>
-<li><a href="software/software/software/">Используемые программы</a>, <a href="software/strategy/strategy/">стратегия игры</a> и <a href="software/algorithms/algorithms/">алгоритмы</a></li>
-<li><a href="hardware/construction/construction/">Конструкция</a> и <a href="hardware/electronics/electronics/">электроника</a></li>
+<li><a href="./software/software/software.md">Используемые программы</a>, <a href="./software/strategy/strategy.md">стратегия игры</a> и <a href="./software/algorithms/algorithms.md">алгоритмы</a></li>
+<li><a href="./hardware/construction/construction.md">Конструкция</a> и <a href="./hardware/electronics/electronics.md">электроника</a></li>
 <li><a href="links/">Полезные ссылки</a></li>
 </ul>
 <!-- ![FootBot v3](./img/footbot3.png) --></div>
@@ -137,32 +133,34 @@
 
         <footer class="col-md-12">
             <hr>
-            <p>Документация создана с помощью <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="js/bootstrap.bundle.min.js"></script>
         <script>
             var base_url = ".",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="search/main.js"></script>
+        <script src="js/base.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Поиск</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
-                <p>Чтобы воспользоваться поиском по документам, введите поисковый запрос ниже.</p>
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
                 <form>
                     <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Поиск..." id="mkdocs-search-query" title="Введите поисковый запрос">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results" data-no-results-text="Ничего не найдено"></div>
+                <div id="mkdocs-search-results"></div>
             </div>
             <div class="modal-footer">
             </div>
@@ -172,33 +170,33 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Сочетания клавиш</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
               <table class="table">
                 <thead>
                   <tr>
-                    <th style="width: 20%;">Клавиши</th>
-                    <th>Действие</th>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Открыть справку</td>
+                    <td>Open this help</td>
                   </tr>
                   <tr>
                     <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Следующая страница</td>
+                    <td>Next page</td>
                   </tr>
                   <tr>
                     <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Предыдущая страница</td>
+                    <td>Previous page</td>
                   </tr>
                   <tr>
                     <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Поиск</td>
+                    <td>Search</td>
                   </tr>
                 </tbody>
               </table>
@@ -213,6 +211,6 @@
 </html>
 
 <!--
-MkDocs version : 1.6.0
-Build Date UTC : 2024-07-16 10:09:21.055586+00:00
+MkDocs version : 1.1.2
+Build Date UTC : 2024-10-26 20:31:37.127945+00:00
 -->

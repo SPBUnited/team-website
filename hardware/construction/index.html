@@ -6,16 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Glazov Yuri">
-        <link rel="canonical" href="https://spbunited.ru/links/">
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Ссылки - SPbUnited</title>
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
+        <link rel="canonical" href="https://spbunited.ru/hardware/construction/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Конструкция - SPbUnited</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
 
-        <script src="../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -23,7 +23,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="..">SPbUnited</a>
+                <a class="navbar-brand" href="../..">SPbUnited</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -34,18 +34,18 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href=".." class="nav-link">Основное</a>
+                                <a href="../.." class="nav-link">Основное</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Устройство робота <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../hardware/construction/" class="dropdown-item">Конструкция</a>
+    <a href="./" class="dropdown-item active">Конструкция</a>
 </li>
                                     
 <li>
-    <a href="../hardware/electronics/" class="dropdown-item">Электроника</a>
+    <a href="../electronics/" class="dropdown-item">Электроника</a>
 </li>
                                 </ul>
                             </li>
@@ -54,20 +54,20 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../software/programs/" class="dropdown-item">Используемые программы</a>
+    <a href="../../software/programs/" class="dropdown-item">Используемые программы</a>
 </li>
                                     
 <li>
-    <a href="../software/strategy/" class="dropdown-item">Стратегия игры</a>
+    <a href="../../software/strategy/" class="dropdown-item">Стратегия игры</a>
 </li>
                                     
 <li>
-    <a href="../software/algorithms/" class="dropdown-item">Алгоритмы</a>
+    <a href="../../software/algorithms/" class="dropdown-item">Алгоритмы</a>
 </li>
                                 </ul>
                             </li>
-                            <li class="navitem active">
-                                <a href="./" class="nav-link">Ссылки</a>
+                            <li class="navitem">
+                                <a href="../../links/" class="nav-link">Ссылки</a>
                             </li>
                         </ul>
 
@@ -78,12 +78,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../software/algorithms/" class="nav-link">
+                                <a rel="prev" href="../.." class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" class="nav-link disabled">
+                                <a rel="next" href="../electronics/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -105,8 +105,24 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">Ссылки на нас</a>
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">Конструкция</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">Платформа</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">Демпфер</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">Дрибблер</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">Кикер</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -114,12 +130,20 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="_1">Ссылки на нас</h2>
-<p><a href="https://t.me/spbunited_robocup">Telegram</a> - наш канал, самая активная соцсеть</p>
-<p><a href="https://github.com/SPBUnited">Github</a> - тут в открытом доступе можно найти почти всё, что мы разработали в рамках лиги SSL</p>
-<p><a href="https://www.youtube.com/@SPbUnited.RoboCup">YouTube</a> - тут находятся записи самых интересных матчей, которые мы играли</p>
-<p><a href="https://www.linkedin.com/company/spbunited">LinkedIn</a> - тут вы можете подать своё резюме, и, возможно, мы примем вас в нашу дружную команду 😉</p>
-<p>Если у вас есть вопросы, можете обращаться в нашем <a href="https://t.me/spbunited_robocup">Telegram канале</a> или на почту spbunited.robocup@gmail.com</p></div>
+<h1 id="_1">Конструкция</h1>
+<p>Конструкцию робота можно разделить на несколько частей: дрибблер, демпфер, платформа и кикер</p>
+<p><img alt="Robot entrails" src="all_hardware.jpg" /></p>
+<h2 id="_2">Платформа</h2>
+<p><img alt="Platform" src="platform.jpg" /></p>
+<p>На платформе располагаются 4 БДПТ, снабженных омниколесами на собственных подшипниковых узлах с одноступенчатым редуктором. Это позволяет роботу перемещаться в любом направлении</p>
+<h2 id="_3">Демпфер</h2>
+<p>Демпфер размещается под дрибблером и используется для того, чтобы ловить мячи, полученные на большой скорости</p>
+<h2 id="_4">Дрибблер</h2>
+<p><img alt="Dribbler" src="dribbler.jpg" /></p>
+<p>В состав дрибблера входит БДПТ с мультипликатором, вращающий мяч, и датчик наличия мяча</p>
+<h2 id="_5">Кикер</h2>
+<p><img alt="Kicker" src="kicker.jpg" /></p>
+<p>Два соленоида с подвижными сердечниками позволяют совершать удары по прямой или навесом</p></div>
             </div>
         </div>
 
@@ -128,12 +152,12 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "..",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../js/base.js" defer></script>
+        <script src="../../js/base.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
-        <script src="../search/main.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
