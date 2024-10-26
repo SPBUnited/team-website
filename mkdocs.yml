@@ -3,7 +3,7 @@ site_url: https://spbunited.ru/
 site_description: SPbUnited team knowledge base.
 site_author: Glazov Yuri
 
-repo_url: https://github.com/SPBUnited/team-website
+# repo_url: https://github.com/SPBUnited/team-website
 
 theme:
   name: united
@@ -14,12 +14,12 @@ theme:
 nav:
   - Основное: "index.md"
   - Устройство робота:
-      - Конструкция: "hardware/construction/construction.md"
-      - Электроника: "hardware/electronics/electronics.md"
+      - Конструкция: "hardware/construction.md"
+      - Электроника: "hardware/electronics.md"
   - Программное обеспечение:
-      - Используемые программы: "software/software/software.md"
-      - Стратегия игры: "software/strategy/strategy.md"
-      - Алгоритмы: "software/algorithms/algorithms.md"
+      - Используемые программы: "software/programs.md"
+      - Стратегия игры: "software/strategy.md"
+      - Алгоритмы: "software/algorithms.md"
   - Ссылки: "links.md"
 
 plugins:
