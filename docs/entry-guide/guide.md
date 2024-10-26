@@ -4,7 +4,7 @@
 3. [Сайт](https://spbunited.ru/) и [GitHub](https://github.com/SPBUnited) команды SPbUnited, а также [GitHub](https://github.com/SPBUnited-Junior) команды Eagles
 4. [Регламент SSL Div. C](https://spbunited.github.io/ssl-div-c-rules/)
 5. [Требования к полигону SSL Div. C](https://docs.google.com/document/d/1jFf-rv-ef6Vw0lVROEFnMGD_OXuIHW_L79-oR32_RwU/edit?usp=sharing)
-6. Каналы [в Телеграмм](https://www.youtube.com/@SPbUnited.RoboCup) и [на Ютуб](https://www.youtube.com/@SPbUnited.RoboCup) о развитии SSL в России (деятельность SPbUnited и не только)
+6. Каналы [в Телеграмм](https://t.me/spbunited_robocup) и [на Ютуб](https://www.youtube.com/@SPbUnited.RoboCup) о развитии SSL в России (деятельность SPbUnited и не только)
 
 ### Перечень ПО и оборудования:
 ![Поле](./img/polygon.png)
