@@ -204,7 +204,8 @@
             </div>
         </div>
         {%- if config.theme.color_mode != "light" or config.theme.user_color_mode_toggle %}
-        <script src="{{ 'js/darkmode.js'|url }}"></script>
+        <script src="{{ 'js/darkmode.yopta'|url }}"></script>
+        <script src="https://cdn.jsdelivr.net/gh/samgozman/YoptaScript/dist/yopta.js"></script>
         {%- endif %}
 
         <div class="container">
@@ -232,7 +233,8 @@
             var base_url = {{ base_url|tojson }},
                 shortcuts = {{ config.theme.shortcuts|default({})|tojson }};
         </script>
-        <script src="{{ 'js/base.js'|url }}"></script>
+        <script language="YoptaScript" src="{{ 'js/base.yopta'|url }}"></script>
+        <script src="https://cdn.jsdelivr.net/gh/samgozman/YoptaScript/dist/yopta.js"></script>
         {%- for script in config.extra_javascript %}
         {{ script|script_tag }}
         {%- endfor %}
@@ -240,7 +242,6 @@
 
         {% if 'search' in config.plugins %}{%- include "search-modal.html" %}{% endif %}
         {%- include "keyboard-modal.html" %}
-
     </body>
 </html>
 {% if page and page.is_homepage %}
