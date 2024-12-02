@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Glazov Yuri">
+        <link rel="canonical" href="https://spbunited.ru/entry-guide/communication/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Пример программы - SPbUnited</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR3D14PQPR"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', "G-LR3D14PQPR");
+        </script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-">
+            <div class="container">
+                <a class="navbar-brand" href="../..">SPbUnited</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Основное</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Введение в SSL</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../guide/" class="dropdown-item">Общая информация</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Пример программы</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Устройство робота</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../hardware/construction/" class="dropdown-item">Конструкция</a>
+</li>
+                                    
+<li>
+    <a href="../../hardware/electronics/" class="dropdown-item">Электроника</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Программное обеспечение</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../software/programs/" class="dropdown-item">Используемые программы</a>
+</li>
+                                    
+<li>
+    <a href="../../software/algorithms/" class="dropdown-item">Алгоритмы</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../links/" class="nav-link">Ссылки</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                      <!--
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Поиск
+                            </a>
+                        </li> -->
+                            <li class="nav-item">
+                                <a rel="prev" href="../guide/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Назад
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../hardware/construction/" class="nav-link">
+                                  Вперед <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../js/darkmode.yopta"></script>
+        <script src="https://cdn.jsdelivr.net/gh/samgozman/YoptaScript/dist/yopta.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Содержание">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link">Пример программы</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#ssl-vision" class="nav-link">Получение данных от SSL-Vision</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">Управление роботом в симуляторе</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#game-controller" class="nav-link">Получение команд от Game Controller</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">Пример программы</h1>
+<p>Рассмотрим взаимодействие участника с программами <a href="../../software/programs/#ssl-vision">SSL-Vision</a>, <a href="../../software/programs/#grsim">GrSim</a> и <a href="../../software/programs/#ssl-game-controller">Game Controller</a>. Для удобства, будем рассматривать уже готовый пример, созданный бразильской командой RobôCIn специально для новых команд в лиге. Ниже будет разбираться актуальный (на момент декабря 2024) код в <a href="https://www.github.com/robocin/ssl-client">данном репозитории</a>. Вы можете самостоятельно собрать проект по инструкции из описания репозитория и убедиться в том, что всё работает.</p>
+<p>В файле <a href="https://github.com/robocin/ssl-client/blob/master/src/main.cpp"><em>src/main.cpp</em></a> реализована основная программа, она:</p>
+<ul>
+<li>получает от SSL-Vision/GrSim координаты мяча и роботов, а также геометрические размеры поля</li>
+<li>выводит их пользователю</li>
+<li>отправляет команды управления на синих роботов.</li>
+</ul>
+<blockquote>
+<p>По регламенту лиги, взаимодействие между программами в общей сети осуществляется с помощью протокола <a href="https://github.com/protocolbuffers/protobuf">Google Protobuf</a>. Стандартные адреса и порты, а также содержание передаваемых пакетов можно посмотреть <a href="https://ssl.robocup.org/league-software/#:~:text=Simulation%20Protocol.-,Standard%20Network%20Parameters,-Protocol">тут</a>.</p>
+</blockquote>
+<p>Также вы можете ознакомиться с нашей реализацией - программой <a href="../../software/programs/#larcmacs">LARCmaCS</a>.</p>
+<h2 id="ssl-vision">Получение данных от <a href="../../software/programs/#ssl-vision">SSL-Vision</a></h2>
+<p>В данном репозитории за получение данных отвечает класс <strong>RoboCupSSLClient</strong>, функционал которого описан в файле <a href="https://github.com/robocin/ssl-client/blob/master/include/ssl-client/net/robocup_ssl_client/robocup_ssl_client.cpp">.../robocup_ssl_client.cpp</a>.</p>
+<h3 id="_2">Формат получаемых данных</h3>
+<p><code>packet</code> (инициализируется на <a href="https://github.com/robocin/ssl-client/blob/master/src/main.cpp#L31">строке 31</a>) - пакет, содержащий информацию о поле, полученный от SSL-Vision/GrSim. 
+Далее программа проверяет, есть ли в этом пакете данные о захваченном с поля (<em>detection</em>, проверяется на <a href="https://github.com/robocin/ssl-client/blob/master/src/main.cpp#L42">строке 42</a>) или геометрические размеры поля (<a href="https://github.com/robocin/ssl-client/blob/master/src/main.cpp#L101-L143">строки 101-143</a>).
+В первом случае, программа выводит информацию о работе SSL-Vision (<a href="https://github.com/robocin/ssl-client/blob/master/src/main.cpp#L47-L59">строки 47-59</a>), обрабатывает данные о мяче (<a href="https://github.com/robocin/ssl-client/blob/master/src/main.cpp#L64-L79">строки 64-79</a>) и о роботах (<a href="https://github.com/robocin/ssl-client/blob/master/src/main.cpp#L81-L99">строки 81-99</a>).</p>
+<p>Все передаваемые параметры <em>detection</em> можно найти в файле <a href="https://github.com/robocin/ssl-client/blob/master/include/ssl-client/protobuf-files/pb/proto/messages_robocup_ssl_detection.proto">.../messages_robocup_ssl_detection.proto</a></p>
+<pre><code>syntax = &quot;proto2&quot;;
+
+message SSL_DetectionBall {
+  required float  confidence = 1;
+  optional uint32 area       = 2;
+  required float  x          = 3;
+  required float  y          = 4;
+  optional float  z          = 5;
+  required float  pixel_x    = 6;
+  required float  pixel_y    = 7;
+}
+
+message SSL_DetectionRobot {
+  required float  confidence  =  1;
+  optional uint32 robot_id    =  2;
+  required float  x           =  3;
+  required float  y           =  4;
+  optional float  orientation =  5;
+  required float  pixel_x     =  6;
+  required float  pixel_y     =  7;
+  optional float  height      =  8;
+}
+
+message SSL_DetectionFrame {
+  required uint32             frame_number  = 1;
+  required double             t_capture     = 2;
+  required double             t_sent        = 3;
+  required uint32             camera_id     = 4;
+  repeated SSL_DetectionBall  balls         = 5;
+  repeated SSL_DetectionRobot robots_yellow = 6;
+  repeated SSL_DetectionRobot robots_blue   = 7;
+}
+</code></pre>
+<p>В директории <a href="https://github.com/robocin/ssl-client/tree/master/include/ssl-client/protobuf-files/pb/proto">include/ssl-client/protobuf-files/pb/proto/</a> можно найти аналогичные списки параметров для всех стандартных пакетов. Тоже самое находится на <a href="https://ssl.robocup.org/league-software/#:~:text=Standard%20Network%20Parameters-,Protobuf%20Definitions,-There%20are%20several">официальном сайте лиги</a>.</p>
+<h2 id="_3">Управление роботом в симуляторе</h2>
+<p>Тут же (<a href="https://github.com/robocin/ssl-client/blob/master/src/main.cpp#L86-L90">строки 86-90</a>) посылаются команды на синих роботов, чтобы показать, что зрение работает:</p>
+<pre><code class="language-C++">if (robot.x() &lt;= 0) {
+    grSim_client.sendCommand(1.0, i);
+} else {
+    grSim_client.sendCommand(-1.0, i);
+}
+</code></pre>
+<p><em>sendCommand(velX, id)</em> - простая функция, которая отправляет на робота с индексом <em>id</em>, скорость движения вперед:</p>
+<pre><code class="language-C++">void GrSim_Client_Example::sendCommand(double velX, int id) {
+    double zero = 0.0;
+    grSim_Packet packet;  //пакет, который будет передан grSim через протокол Google Protobuf
+    bool yellow = false;
+    packet.mutable_commands()-&gt;set_isteamyellow(yellow);
+    packet.mutable_commands()-&gt;set_timestamp(0.0);
+    grSim_Robot_Command* command =
+        packet.mutable_commands()-&gt;add_robot_commands();  //список команд на роботов
+    command-&gt;set_id(id);
+
+    command-&gt;set_wheelsspeed(!true);  //возможность управления колесами по отдельности
+    command-&gt;set_wheel1(zero);
+    command-&gt;set_wheel2(zero);
+    command-&gt;set_wheel3(zero);
+    command-&gt;set_wheel4(zero);
+    command-&gt;set_veltangent(velX);  //скорость движения
+    command-&gt;set_velnormal(zero);
+    command-&gt;set_velangular(zero);
+
+    command-&gt;set_kickspeedx(zero);  //удар прямо
+    command-&gt;set_kickspeedz(zero);  //удар навесом
+    command-&gt;set_spinner(false);  //дрибблер
+
+    QByteArray dgram;
+    dgram.resize(packet.ByteSize());
+    packet.SerializeToArray(dgram.data(), dgram.size());  //создание массива для отправки
+    if (socket-&gt;writeDatagram(dgram, this-&gt;_addr, this-&gt;_port) &gt; -1) {  //отправка
+        qDebug(&quot;send data&quot;);
+    }
+}
+</code></pre>
+<p>Видно, что функция забивает нулями все неиспользуемые параметры, передаваемые на робота.</p>
+<h2 id="game-controller">Получение команд от <a href="../../software/programs/#ssl-game-controller">Game Controller</a></h2>
+<p>Получение команд от судей не показано в файле <code>main.cpp</code>, но реализовано в файле <a href="https://github.com/robocin/ssl-client/blob/master/include/ssl-client/net/referee_ssl_client/referee_ssl_client.cpp">.../referee_ssl_client.cpp</a>. Работает аналогично с получением пакетов от SSL Vision</p>
+<p>Для того чтобы подробнее узнать о коммуникации внутри сети в лиге RoboCup SSL, изучите исходный код <a href="https://www.github.com/robocin/ssl-client">описанного репозитория</a>. Если остались вопросы, не стесняйтесь связываться <a href="../../links/">любым удобным способом</a> с нами и спрашивать лично, будем рады помочь!</p>
+<p>Спасибо за проявленный интерес к лиге!</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Документация создана с помощью <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {};
+        </script>
+        <script language="YoptaScript" src="../../js/base.yopta"></script>
+        <script src="https://cdn.jsdelivr.net/gh/samgozman/YoptaScript/dist/yopta.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Поиск</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <p>Чтобы воспользоваться поиском по документам, введите поисковый запрос ниже</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Поиск..." id="mkdocs-search-query" title="Введите поисковый запрос">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="Ничего не найдено"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Сочетания клавиш</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Клавиши</th>
+                    <th>Действие</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Открыть справку</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Следующая страница</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Предыдущая страница</td>
+                  </tr>
+                  <!-- <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Поиск</td>
+                  </tr> -->
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+</html>

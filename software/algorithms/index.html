@@ -15,12 +15,6 @@
         <link href="../../css/solid.min.css" rel="stylesheet">
         <link href="../../css/v4-font-face.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/.min.css" disabled>
-        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/.min.css" >
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/django.min.js"></script>
-        <script>hljs.highlightAll();</script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR3D14PQPR"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
@@ -47,8 +41,18 @@
                             <li class="nav-item">
                                 <a href="../.." class="nav-link">Основное</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="../../entry-guide/guide/" class="nav-link">Введение в Small Size League</a>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Введение в SSL</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../entry-guide/guide/" class="dropdown-item">Общая информация</a>
+</li>
+                                    
+<li>
+    <a href="../../entry-guide/communication/" class="dropdown-item">Пример программы</a>
+</li>
+                                </ul>
                             </li>
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Устройство робота</a>
@@ -136,14 +140,16 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="_1">Алгоритмы</h1>
-<p>Ниже кратко описаны самые интересные алгоритмы, разработанные нами.</p>
+<p>Ниже кратко описаны самые интересные алгоритмы, разработанные нами. Позже этот список будет активно дополняться</p>
 <h2 id="bang-bang"><a href="bang_bang/">Bang-bang траектории</a></h2>
-<p>Для оптимального движения робота, необходимо разработать алгоритм, строящий оптимальную по времени траекторию.
-<a href="https://github.com/SPBUnited/strategy/tree/bang-bang-path">Репозиторий с реализацией</a></p>
+<p>Для оптимального движения робота, необходимо разработать алгоритм, строящий оптимальную по времени траекторию. Траектории такого типа часто встречаются у других команд лиги</p>
+<!-- [Репозиторий с реализацией](https://github.com/SPBUnited/strategy/tree/bang-bang-path) -->
+
 <p><img alt="bang-bang image" src="bang_bang/spinning_trapez.gif" /></p>
 <h2 id="_2">Тепловые карты для пасов</h2>
-<p>Мы используем тепловые карты для визуализации на поле зон, в которые удобно давать пас. 
-<a href="https://github.com/SPBUnited/strategy/tree/explore_best_pass">Репозиторий с реализацией</a></p>
+<p>Мы используем тепловые карты для визуализации на поле зон, в которые удобно давать пас. Данный алгоритм не подходит для определения оптимальных точек во время игры (так как работает непозволительно долго), но позволяет удобно подбирать коэффициенты для метрик оценки точек для пасов. Позже мы опубликуем наш оптимизированный алгоритм для определения точек во время игры</p>
+<!-- [Репозиторий с реализацией](https://github.com/SPBUnited/strategy/tree/explore_best_pass) -->
+
 <p><img alt="heat map" src="heat_map/heat_map2.png" /></p></div>
             </div>
         </div>

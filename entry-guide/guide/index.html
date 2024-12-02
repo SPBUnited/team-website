@@ -8,19 +8,13 @@
         <meta name="author" content="Glazov Yuri">
         <link rel="canonical" href="https://spbunited.ru/entry-guide/guide/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Введение в Small Size League - SPbUnited</title>
+        <title>Общая информация - SPbUnited</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
         <link href="../../css/solid.min.css" rel="stylesheet">
         <link href="../../css/v4-font-face.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/.min.css" disabled>
-        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/.min.css" >
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/django.min.js"></script>
-        <script>hljs.highlightAll();</script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR3D14PQPR"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
@@ -47,8 +41,18 @@
                             <li class="nav-item">
                                 <a href="../.." class="nav-link">Основное</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="./" class="nav-link active" aria-current="page">Введение в Small Size League</a>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Введение в SSL</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Общая информация</a>
+</li>
+                                    
+<li>
+    <a href="../communication/" class="dropdown-item">Пример программы</a>
+</li>
+                                </ul>
                             </li>
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Устройство робота</a>
@@ -94,7 +98,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../hardware/construction/" class="nav-link">
+                                <a rel="next" href="../communication/" class="nav-link">
                                   Вперед <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -157,7 +161,7 @@
 <p>Всё ПО, описанное выше не предъявляет особых требований к системе, на которой запускается, поэтому для запуска может использоваться даже обычный ноутбук с Linux.</p>
 <h5 id="-">ПО и оборудование команд-участников:</h5>
 <ol>
-<li>Компьютер команды - кмопьютер, получающий данные о положении роботов и мяча из SSL-Vision, команды от Game Controller и рассчитывающий действия роботов команды.</li>
+<li>Компьютер команды - компьютер, получающий данные о положении роботов и мяча из <a href="../../software/programs/#ssl-vision">SSL-Vision</a>, команды от Game Controller и рассчитывающий действия роботов команды.</li>
 <li>Модуль беспроводного управления роботами - система, получающая команды от компьютера и пересылающая их на роботов по радиоканалу. Может использоваться Raspbery Pi с модулями NRF24L01.</li>
 <li>Команда автономных роботов - получают команды, рассчитаные на компьютере и играют в футбол. Можно использовать открытые решения, например <a href="https://github.com/SPBUnited-Junior/Eagles_Hardware_2024">роботов</a> команды Eagles. Подробные требования к роботам описаны в регламенте лиги.</li>
 </ol>
