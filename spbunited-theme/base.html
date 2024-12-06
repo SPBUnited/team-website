@@ -204,8 +204,7 @@
             </div>
         </div>
         {%- if config.theme.color_mode != "light" or config.theme.user_color_mode_toggle %}
-        <script src="{{ 'js/darkmode.yopta'|url }}"></script>
-        <script src="https://cdn.jsdelivr.net/gh/samgozman/YoptaScript/dist/yopta.js"></script>
+        <script src="{{ 'js/darkmode.js'|url }}"></script>
         {%- endif %}
 
         <div class="container">
@@ -230,11 +229,24 @@
       {%- block scripts %}
         <script src="{{ 'js/bootstrap.bundle.min.js'|url }}"></script>
         <script>
+          var urlParams = new URLSearchParams(window.location.search);
+          var langParam = urlParams.get('lang');
+          if (langParam !== 'ru' && langParam !== 'en') {
+            const currentUrl = window.location.href;
+            const userLanguage = navigator.language || navigator.userLanguage;
+            const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        
+            if (!currentUrl.includes('/en/') && !userLanguage.startsWith('ru')) { // && !timeZone.startsWith('Europe/Moscow')
+                window.location.href = '/en/';
+            }
+          }
+        </script>
+      
+        <script>
             var base_url = {{ base_url|tojson }},
                 shortcuts = {{ config.theme.shortcuts|default({})|tojson }};
         </script>
-        <script language="YoptaScript" src="{{ 'js/base.yopta'|url }}"></script>
-        <script src="https://cdn.jsdelivr.net/gh/samgozman/YoptaScript/dist/yopta.js"></script>
+        <script src="{{ 'js/base.js'|url }}"></script>
         {%- for script in config.extra_javascript %}
         {{ script|script_tag }}
         {%- endfor %}
