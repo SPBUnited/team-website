@@ -15,6 +15,10 @@
         <link href="../../../css/solid.min.css" rel="stylesheet">
         <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/.min.css" >
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR3D14PQPR"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
@@ -96,8 +100,7 @@
                 </div>
             </div>
         </div>
-        <script src="../../../js/darkmode.yopta"></script>
-        <script src="https://cdn.jsdelivr.net/gh/samgozman/YoptaScript/dist/yopta.js"></script>
+        <script src="../../../js/darkmode.js"></script>
 
         <div class="container">
             <div class="row">
@@ -238,11 +241,24 @@
         </footer>
         <script src="../../../js/bootstrap.bundle.min.js"></script>
         <script>
+          var urlParams = new URLSearchParams(window.location.search);
+          var langParam = urlParams.get('lang');
+          if (langParam !== 'ru' && langParam !== 'en') {
+            const currentUrl = window.location.href;
+            const userLanguage = navigator.language || navigator.userLanguage;
+            const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        
+            if (!currentUrl.includes('/en/') && !userLanguage.startsWith('ru') && !timeZone.startsWith('Europe/Moscow')) {
+                window.location.href = '/en/';
+            }
+          }
+        </script>
+      
+        <script>
             var base_url = "../../..",
                 shortcuts = {};
         </script>
-        <script language="YoptaScript" src="../../../js/base.yopta"></script>
-        <script src="https://cdn.jsdelivr.net/gh/samgozman/YoptaScript/dist/yopta.js"></script>
+        <script src="../../../js/base.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script src="../../../search/main.js"></script>
 
