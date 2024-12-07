@@ -1,4 +1,5 @@
 # **SPbUnited**
+## [English version](./en.md)
 
 Мы - команда в лиге RoboCup SSL (Small Size League) из России. На этом сайте вы можете узнать о наших наработках в области конструкции, электроники и ПО. 
 
@@ -8,6 +9,3 @@
 - [Используемые программы](./software/programs.md), [стратегия игры](./software/strategy.md) и [алгоритмы](./software/algorithms.md)
 - [Конструкция](./hardware/construction.md) и [электроника](./hardware/electronics.md)
 - [Полезные ссылки](./links.md)
-
-
-<!-- ![FootBot v3](./img/footbot3.png) -->

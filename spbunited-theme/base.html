@@ -236,7 +236,7 @@
             const userLanguage = navigator.language || navigator.userLanguage;
             const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
         
-            if (!currentUrl.includes('/en/') && !userLanguage.startsWith('ru')) { // && !timeZone.startsWith('Europe/Moscow')
+            if (!currentUrl.includes('/en/') && !userLanguage.startsWith('ru') && !timeZone.startsWith('Europe/Moscow')) {
                 window.location.href = '/en/';
             }
           }
