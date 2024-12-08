@@ -15,10 +15,7 @@
         <link href="../../css/solid.min.css" rel="stylesheet">
         <link href="../../css/v4-font-face.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/.min.css" disabled>
-        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/.min.css" >
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script>
+        <link href="../../css/monokai.css" rel="stylesheet">
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR3D14PQPR"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
@@ -165,80 +162,147 @@
 Далее программа проверяет, есть ли в этом пакете данные о захваченном с поля (<em>detection</em>, проверяется на <a href="https://github.com/robocin/ssl-client/blob/master/src/main.cpp#L42">строке 42</a>) или геометрические размеры поля (<a href="https://github.com/robocin/ssl-client/blob/master/src/main.cpp#L101-L143">строки 101-143</a>).
 В первом случае, программа выводит информацию о работе SSL-Vision (<a href="https://github.com/robocin/ssl-client/blob/master/src/main.cpp#L47-L59">строки 47-59</a>), обрабатывает данные о мяче (<a href="https://github.com/robocin/ssl-client/blob/master/src/main.cpp#L64-L79">строки 64-79</a>) и о роботах (<a href="https://github.com/robocin/ssl-client/blob/master/src/main.cpp#L81-L99">строки 81-99</a>).</p>
 <p>Все передаваемые параметры <em>detection</em> можно найти в файле <a href="https://github.com/robocin/ssl-client/blob/master/include/ssl-client/protobuf-files/pb/proto/messages_robocup_ssl_detection.proto">.../messages_robocup_ssl_detection.proto</a></p>
-<pre><code>syntax = &quot;proto2&quot;;
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">syntax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;proto2&quot;</span><span class="p">;</span>
 
-message SSL_DetectionBall {
-  required float  confidence = 1;
-  optional uint32 area       = 2;
-  required float  x          = 3;
-  required float  y          = 4;
-  optional float  z          = 5;
-  required float  pixel_x    = 6;
-  required float  pixel_y    = 7;
-}
+<span class="n">message</span><span class="w"> </span><span class="n">SSL_DetectionBall</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">required</span><span class="w"> </span><span class="kt">float</span><span class="w">  </span><span class="n">confidence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="n">optional</span><span class="w"> </span><span class="n">uint32</span><span class="w"> </span><span class="n">area</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">  </span><span class="n">required</span><span class="w"> </span><span class="kt">float</span><span class="w">  </span><span class="n">x</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">  </span><span class="n">required</span><span class="w"> </span><span class="kt">float</span><span class="w">  </span><span class="n">y</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<span class="w">  </span><span class="n">optional</span><span class="w"> </span><span class="kt">float</span><span class="w">  </span><span class="n">z</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">  </span><span class="n">required</span><span class="w"> </span><span class="kt">float</span><span class="w">  </span><span class="n">pixel_x</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+<span class="w">  </span><span class="n">required</span><span class="w"> </span><span class="kt">float</span><span class="w">  </span><span class="n">pixel_y</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+<span class="p">}</span>
 
-message SSL_DetectionRobot {
-  required float  confidence  =  1;
-  optional uint32 robot_id    =  2;
-  required float  x           =  3;
-  required float  y           =  4;
-  optional float  orientation =  5;
-  required float  pixel_x     =  6;
-  required float  pixel_y     =  7;
-  optional float  height      =  8;
-}
+<span class="n">message</span><span class="w"> </span><span class="n">SSL_DetectionRobot</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">required</span><span class="w"> </span><span class="kt">float</span><span class="w">  </span><span class="n">confidence</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="n">optional</span><span class="w"> </span><span class="n">uint32</span><span class="w"> </span><span class="n">robot_id</span><span class="w">    </span><span class="o">=</span><span class="w">  </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">  </span><span class="n">required</span><span class="w"> </span><span class="kt">float</span><span class="w">  </span><span class="n">x</span><span class="w">           </span><span class="o">=</span><span class="w">  </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">  </span><span class="n">required</span><span class="w"> </span><span class="kt">float</span><span class="w">  </span><span class="n">y</span><span class="w">           </span><span class="o">=</span><span class="w">  </span><span class="mi">4</span><span class="p">;</span>
+<span class="w">  </span><span class="n">optional</span><span class="w"> </span><span class="kt">float</span><span class="w">  </span><span class="n">orientation</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">  </span><span class="n">required</span><span class="w"> </span><span class="kt">float</span><span class="w">  </span><span class="n">pixel_x</span><span class="w">     </span><span class="o">=</span><span class="w">  </span><span class="mi">6</span><span class="p">;</span>
+<span class="w">  </span><span class="n">required</span><span class="w"> </span><span class="kt">float</span><span class="w">  </span><span class="n">pixel_y</span><span class="w">     </span><span class="o">=</span><span class="w">  </span><span class="mi">7</span><span class="p">;</span>
+<span class="w">  </span><span class="n">optional</span><span class="w"> </span><span class="kt">float</span><span class="w">  </span><span class="n">height</span><span class="w">      </span><span class="o">=</span><span class="w">  </span><span class="mi">8</span><span class="p">;</span>
+<span class="p">}</span>
 
-message SSL_DetectionFrame {
-  required uint32             frame_number  = 1;
-  required double             t_capture     = 2;
-  required double             t_sent        = 3;
-  required uint32             camera_id     = 4;
-  repeated SSL_DetectionBall  balls         = 5;
-  repeated SSL_DetectionRobot robots_yellow = 6;
-  repeated SSL_DetectionRobot robots_blue   = 7;
-}
-</code></pre>
+<span class="n">message</span><span class="w"> </span><span class="n">SSL_DetectionFrame</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">required</span><span class="w"> </span><span class="n">uint32</span><span class="w">             </span><span class="n">frame_number</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="n">required</span><span class="w"> </span><span class="kt">double</span><span class="w">             </span><span class="n">t_capture</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">  </span><span class="n">required</span><span class="w"> </span><span class="kt">double</span><span class="w">             </span><span class="n">t_sent</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">  </span><span class="n">required</span><span class="w"> </span><span class="n">uint32</span><span class="w">             </span><span class="n">camera_id</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<span class="w">  </span><span class="n">repeated</span><span class="w"> </span><span class="n">SSL_DetectionBall</span><span class="w">  </span><span class="n">balls</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">  </span><span class="n">repeated</span><span class="w"> </span><span class="n">SSL_DetectionRobot</span><span class="w"> </span><span class="n">robots_yellow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+<span class="w">  </span><span class="n">repeated</span><span class="w"> </span><span class="n">SSL_DetectionRobot</span><span class="w"> </span><span class="n">robots_blue</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+
 <p>В директории <a href="https://github.com/robocin/ssl-client/tree/master/include/ssl-client/protobuf-files/pb/proto">include/ssl-client/protobuf-files/pb/proto/</a> можно найти аналогичные списки параметров для всех стандартных пакетов. Тоже самое находится на <a href="https://ssl.robocup.org/league-software/#:~:text=Standard%20Network%20Parameters-,Protobuf%20Definitions,-There%20are%20several">официальном сайте лиги</a>.</p>
 <h2 id="_3">Управление роботом в симуляторе</h2>
 <p>Тут же (<a href="https://github.com/robocin/ssl-client/blob/master/src/main.cpp#L86-L90">строки 86-90</a>) посылаются команды на синих роботов, чтобы показать, что зрение работает:</p>
-<pre><code class="language-C++">if (robot.x() &lt;= 0) {
-    grSim_client.sendCommand(1.0, i);
-} else {
-    grSim_client.sendCommand(-1.0, i);
-}
-</code></pre>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">robot</span><span class="p">.</span><span class="n">x</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">grSim_client</span><span class="p">.</span><span class="n">sendCommand</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">grSim_client</span><span class="p">.</span><span class="n">sendCommand</span><span class="p">(</span><span class="mf">-1.0</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+
 <p><em>sendCommand(velX, id)</em> - простая функция, которая отправляет на робота с индексом <em>id</em>, скорость движения вперед:</p>
-<pre><code class="language-C++">void GrSim_Client_Example::sendCommand(double velX, int id) {
-    double zero = 0.0;
-    grSim_Packet packet;  //пакет, который будет передан grSim через протокол Google Protobuf
-    bool yellow = false;
-    packet.mutable_commands()-&gt;set_isteamyellow(yellow);
-    packet.mutable_commands()-&gt;set_timestamp(0.0);
-    grSim_Robot_Command* command =
-        packet.mutable_commands()-&gt;add_robot_commands();  //список команд на роботов
-    command-&gt;set_id(id);
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">GrSim_Client_Example::sendCommand</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">velX</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">zero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">grSim_Packet</span><span class="w"> </span><span class="n">packet</span><span class="p">;</span><span class="w">  </span><span class="c1">//пакет, который будет передан grSim через протокол Google Protobuf</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">yellow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="n">packet</span><span class="p">.</span><span class="n">mutable_commands</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">set_isteamyellow</span><span class="p">(</span><span class="n">yellow</span><span class="p">);</span>
+<span class="w">    </span><span class="n">packet</span><span class="p">.</span><span class="n">mutable_commands</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">set_timestamp</span><span class="p">(</span><span class="mf">0.0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">grSim_Robot_Command</span><span class="o">*</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="n">packet</span><span class="p">.</span><span class="n">mutable_commands</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">add_robot_commands</span><span class="p">();</span><span class="w">  </span><span class="c1">//список команд на роботов</span>
+<span class="w">    </span><span class="n">command</span><span class="o">-&gt;</span><span class="n">set_id</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
 
-    command-&gt;set_wheelsspeed(!true);  //возможность управления колесами по отдельности
-    command-&gt;set_wheel1(zero);
-    command-&gt;set_wheel2(zero);
-    command-&gt;set_wheel3(zero);
-    command-&gt;set_wheel4(zero);
-    command-&gt;set_veltangent(velX);  //скорость движения
-    command-&gt;set_velnormal(zero);
-    command-&gt;set_velangular(zero);
+<span class="w">    </span><span class="n">command</span><span class="o">-&gt;</span><span class="n">set_wheelsspeed</span><span class="p">(</span><span class="o">!</span><span class="nb">true</span><span class="p">);</span><span class="w">  </span><span class="c1">//возможность управления колесами по отдельности</span>
+<span class="w">    </span><span class="n">command</span><span class="o">-&gt;</span><span class="n">set_wheel1</span><span class="p">(</span><span class="n">zero</span><span class="p">);</span>
+<span class="w">    </span><span class="n">command</span><span class="o">-&gt;</span><span class="n">set_wheel2</span><span class="p">(</span><span class="n">zero</span><span class="p">);</span>
+<span class="w">    </span><span class="n">command</span><span class="o">-&gt;</span><span class="n">set_wheel3</span><span class="p">(</span><span class="n">zero</span><span class="p">);</span>
+<span class="w">    </span><span class="n">command</span><span class="o">-&gt;</span><span class="n">set_wheel4</span><span class="p">(</span><span class="n">zero</span><span class="p">);</span>
+<span class="w">    </span><span class="n">command</span><span class="o">-&gt;</span><span class="n">set_veltangent</span><span class="p">(</span><span class="n">velX</span><span class="p">);</span><span class="w">  </span><span class="c1">//скорость движения</span>
+<span class="w">    </span><span class="n">command</span><span class="o">-&gt;</span><span class="n">set_velnormal</span><span class="p">(</span><span class="n">zero</span><span class="p">);</span>
+<span class="w">    </span><span class="n">command</span><span class="o">-&gt;</span><span class="n">set_velangular</span><span class="p">(</span><span class="n">zero</span><span class="p">);</span>
 
-    command-&gt;set_kickspeedx(zero);  //удар прямо
-    command-&gt;set_kickspeedz(zero);  //удар навесом
-    command-&gt;set_spinner(false);  //дрибблер
+<span class="w">    </span><span class="n">command</span><span class="o">-&gt;</span><span class="n">set_kickspeedx</span><span class="p">(</span><span class="n">zero</span><span class="p">);</span><span class="w">  </span><span class="c1">//удар прямо</span>
+<span class="w">    </span><span class="n">command</span><span class="o">-&gt;</span><span class="n">set_kickspeedz</span><span class="p">(</span><span class="n">zero</span><span class="p">);</span><span class="w">  </span><span class="c1">//удар навесом</span>
+<span class="w">    </span><span class="n">command</span><span class="o">-&gt;</span><span class="n">set_spinner</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span><span class="w">  </span><span class="c1">//дрибблер</span>
 
-    QByteArray dgram;
-    dgram.resize(packet.ByteSize());
-    packet.SerializeToArray(dgram.data(), dgram.size());  //создание массива для отправки
-    if (socket-&gt;writeDatagram(dgram, this-&gt;_addr, this-&gt;_port) &gt; -1) {  //отправка
-        qDebug(&quot;send data&quot;);
-    }
-}
-</code></pre>
+<span class="w">    </span><span class="n">QByteArray</span><span class="w"> </span><span class="n">dgram</span><span class="p">;</span>
+<span class="w">    </span><span class="n">dgram</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">packet</span><span class="p">.</span><span class="n">ByteSize</span><span class="p">());</span>
+<span class="w">    </span><span class="n">packet</span><span class="p">.</span><span class="n">SerializeToArray</span><span class="p">(</span><span class="n">dgram</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">dgram</span><span class="p">.</span><span class="n">size</span><span class="p">());</span><span class="w">  </span><span class="c1">//создание массива для отправки</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">socket</span><span class="o">-&gt;</span><span class="n">writeDatagram</span><span class="p">(</span><span class="n">dgram</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">_addr</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">_port</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">//отправка</span>
+<span class="w">        </span><span class="n">qDebug</span><span class="p">(</span><span class="s">&quot;send data&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+
 <p>Видно, что функция забивает нулями все неиспользуемые параметры, передаваемые на робота.</p>
 <h2 id="game-controller">Получение команд от <a href="../../software/programs/#ssl-game-controller">Game Controller</a></h2>
 <p>Получение команд от судей не показано в файле <code>main.cpp</code>, но реализовано в файле <a href="https://github.com/robocin/ssl-client/blob/master/include/ssl-client/net/referee_ssl_client/referee_ssl_client.cpp">.../referee_ssl_client.cpp</a>. Работает аналогично с получением пакетов от SSL Vision</p>
@@ -271,7 +335,7 @@ message SSL_DetectionFrame {
                 shortcuts = {};
         </script>
         <script src="../../js/base.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
         <script src="../../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
