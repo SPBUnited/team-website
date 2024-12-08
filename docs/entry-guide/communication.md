@@ -23,7 +23,7 @@
 
 Все передаваемые параметры *detection* можно найти в файле [.../messages_robocup_ssl_detection.proto](https://github.com/robocin/ssl-client/blob/master/include/ssl-client/protobuf-files/pb/proto/messages_robocup_ssl_detection.proto)
 
-```
+``` C++
 syntax = "proto2";
 
 message SSL_DetectionBall {
